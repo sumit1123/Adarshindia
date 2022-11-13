@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:background="@drawable/adarsh_gradient">
+
+       <ImageView
+           android:id="@+id/img_back"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/back"
+           android:layout_marginTop="@dimen/_50sdp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           />
+
+
+        <ImageView
+            android:id="@+id/img_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/donate"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/img_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_donate"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_text"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:inputType="phone"
+            android:drawableStart="@drawable/ruppes"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/enter_amount"
+            android:paddingStart="@dimen/_10sdp"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/editext_background"
+            app:layout_constraintTop_toBottomOf="@+id/img_heart"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:inputType="number"
+            android:drawableStart="@drawable/phone"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/enter_mobile_number"
+            android:paddingStart="@dimen/_10sdp"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/editext_background"
+            app:layout_constraintTop_toBottomOf="@+id/et_amount"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/continues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/et_mobile"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple"
+                android:text="Continue"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/white"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <include
+            android:id="@+id/constraint_progressbar"
+            layout="@layout/layout_progress_bar"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

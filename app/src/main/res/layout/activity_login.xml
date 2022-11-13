@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_28sdp"
+        android:background="@drawable/adarsh_gradient"
+        tools:context=".ui.LoginActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/loan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_48sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintTop_toBottomOf="@+id/loan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/canlog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_can_log_in_with_your_mobile_number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/signin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="@dimen/_35sdp"
+            app:layout_constraintTop_toBottomOf="@+id/canlog"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="@string/mobile_number"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:inputType="phone"
+                android:drawablePadding="@dimen/_18sdp"
+                android:drawableStart="@drawable/phone"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/mobile"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adarsh_gradient"
+                android:text="@string/login"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/white"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/donthave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_have_an_account_signin"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+     <include
+         android:id="@+id/constraint_progressbar"
+         layout="@layout/layout_progress_bar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

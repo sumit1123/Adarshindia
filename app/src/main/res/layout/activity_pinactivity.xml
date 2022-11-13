@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/adarsh_gradient"
+        tools:context=".ui.PINActivity">
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/pintext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/gray_light"
+          android:layout_marginTop="@dimen/_100sdp"
+          android:textSize="@dimen/_18sdp"
+          android:text="@string/let_u00e2_u0080_u0099s_setup_your_pin"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_50sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pintext">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_otp1"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:background="@drawable/pin_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_otp2"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:background="@drawable/pin_background"
+                app:layout_constraintStart_toEndOf="@+id/et_otp1"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_otp3"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:background="@drawable/pin_background"
+                app:layout_constraintStart_toEndOf="@+id/et_otp2"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_otp4"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:background="@drawable/pin_background"
+                app:layout_constraintStart_toEndOf="@+id/et_otp3"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_60sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cons_otp"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adarsh_gradient"
+                android:text="@string/next"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/white"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+       <androidx.appcompat.widget.AppCompatCheckedTextView
+           android:id="@+id/tv_forgotpin"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/forgot_pin"
+           android:textColor="@color/white"
+           android:textStyle="bold"
+           android:layout_marginTop="@dimen/_20sdp"
+           android:layout_marginEnd="@dimen/_30sdp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/next"
+           />
+        <include
+            android:id="@+id/constraint_progressbar"
+            layout="@layout/layout_progress_bar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
